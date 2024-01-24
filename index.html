@@ -16,11 +16,35 @@
     <body>
         <div class="container">
             <img src="cart.jpg">
-            <input type="text" id="input-field" placeholder="Items">
+            <input type="text" id="input-field" autocomplete="off" placeholder="Items">
             <button id="add-button">Add to cart</button>
             <ul id="shopping-list">
             </ul>
+        <!-- <button id="delete-all-button">Delete All</button> -->
+
         </div>
+
+        <button onclick="document.getElementById('id01').style.display='block'" class="none">Open Modal</button>
+
+        <div id="id01" class="modal">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container">
+                    <h1>Delete Item</h1>
+                    <p>Are you sure you want to delete your Item?</p>
+                    <div class="clearfix">
+                        <button type="button" class="cancelbtn">Cancel</button>
+                        <button type="button" class="deletebtn">Delete</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js"></script>
         <script src="index.js" type="module"></script>
     </body>
 </html>
+
+
+
